@@ -41,8 +41,10 @@
 }
 
 /* Base */
-/*  * - for each element on page */
-* {
+/*  * - for each element on page, *::before - for each pseudoelement for any element */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -74,6 +76,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 address {
@@ -154,7 +157,7 @@ address {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; /* для гарного ефекту прокрутки*/
 }
 
 .hero-title {
@@ -235,12 +238,6 @@ address {
 }
 
 /* Chefs section */
-.chef-photo {
-  border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-secondary-dark);
-}
-
 .chefs-title {
   max-width: 520px;
   margin: 0 auto 80px;
@@ -254,13 +251,49 @@ address {
   content: ""; /*necessary for pseudo-elements; NEVER put text inside*/
 }
 
+.chefs-list {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
+
 .chef-title {
   margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Formats section */
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
 .formats-list {
   display: flex;
   gap: 20px;
@@ -313,6 +346,7 @@ address {
   background-color: transparent;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -321,11 +355,52 @@ address {
 }
 
 /* Contacts section */
+.contacts-section {
+  padding-bottom: 96px;
+}
+
+.contacts-container {
+  display: flex;
+  gap: 32px;
+}
+
 .contacts-title {
   margin-bottom: 16px;
 }
 
+.contacts-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+  filter: grayscale(80%);
+}
+
 /* Footer */
+.footer {
+  padding: 32px 0;
+}
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  gap: 20px;
+  flex-basis: 50%;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
 .address-link {
   font-size: 16px;
   font-weight: 300;
