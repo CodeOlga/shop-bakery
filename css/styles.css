@@ -516,8 +516,10 @@ address {
   max-width: 880px;
   height: 100%;
   max-height: 880px;
+  padding: 128px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
+  overflow-y: auto;
 }
 
 .modal-btn-close {
@@ -525,6 +527,60 @@ address {
   top: 40px;
   right: 40px;
 }
+
+/* Form */
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+  font-size: 16px;
+  line-height: 1.17;
+  color: var(--color-secondary-dark);
+  transition: transform 0.3s;
+}
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary-dark);
+  background-color: transparent;
+}
+
+.form-input:focus + .form-label {
+  transform: translate(-36px, -40px);
+}
+
+.form-input:focus {
+  color: var(--color-primary-dark);
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.form-terms {
+  max-width: 220px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* .flag-ukraine {
   width: 300px;
   height: 200px;
