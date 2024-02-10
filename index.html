@@ -222,35 +222,48 @@
               <p>Заповни форму, щоб ми зв'язались з тобою!</p>
               <form name="contact-form" autocomplete="off">
                 <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-name"
+                    >Ім'я</label
+                  >
                   <input
                     class="form-input"
                     id="user-name"
                     name="user-name"
                     type="text"
+                    placeholder="Ім'я"
+                    minlength="2"
+                    maxlength="20"
+                    required
                   />
-                  <label class="form-label" for="user-name">Ім'я</label>
                 </div>
 
                 <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-tel"
+                    >Телефон</label
+                  >
                   <input
                     class="form-input"
                     id="user-tel"
                     name="user-tel"
                     type="tel"
+                    placeholder="Телефон"
+                    pattern="^\+[0-9]{12}"
+                    required
                   />
-                  <label class="form-label" for="user-tel">Телефон</label>
                 </div>
 
                 <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-email"
+                    >Електронна пошта</label
+                  >
                   <input
                     class="form-input"
                     id="user-email"
                     name="user-email"
                     type="email"
+                    placeholder="Електронна пошта"
+                    required
                   />
-                  <label class="form-label" for="user-email"
-                    >Електронна пошта</label
-                  >
                 </div>
 
                 <button class="form-button button" type="submit">
@@ -349,35 +362,50 @@
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
+            <label class="form-label visually-hidden" for="user-name"
+              >Ім'я</label
+            >
             <input
               class="form-input"
               id="user-name"
               name="user-name"
               type="text"
+              placeholder="Ім'я"
+              minlength="2"
+              maxlength="20"
+              required
             />
-            <label class="form-label" for="user-name">Ім'я</label>
           </div>
 
           <div class="form-field">
+            <label class="form-label visually-hidden" for="user-tel"
+              >Телефон</label
+            >
             <input
               class="form-input"
               id="user-tel"
               name="user-tel"
               type="tel"
+              placeholder="Телефон"
+              pattern="^\+[0-9]{12}"
+              required
             />
-            <label class="form-label" for="user-tel">Телефон</label>
           </div>
 
           <div class="form-field">
+            <label class="form-label visually-hidden" for="user-email"
+              >Електронна пошта</label
+            >
             <input
               class="form-input"
               id="user-email"
               name="user-email"
               type="email"
+              placeholder="Електронна пошта"
+              required
             />
-            <label class="form-label" for="user-email">Електронна пошта</label>
           </div>
 
           <button class="form-button button" type="submit">
