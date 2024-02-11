@@ -1,96 +1,14 @@
 /* Local fonts */
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/poppins-v20-latin-300.woff2") format("woff2");
-}
+@import "./utils/fonts";
 
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/poppins-v20-latin-900.woff2") format("woff2");
-}
-
-:root {
-  --color-primary-dark: #31261a;
-  --color-primary-light: #faf4ea;
-  --color-secondary-dark: #a28268;
-  --color-brand-normal: #819b57;
-  --color-brand-dark: #465929;
-  --color-brand-light: #cfcfbc;
-}
+/* Roots*/
+@import "./utils/variables";
 
 /* Base */
-/*  * - for each element on page, *::before - for each pseudo-element for any element */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import "./base";
 
-body {
-  color: var(--color-brand-dark);
-  background-color: var(--color-primary-light);
-  font-family: Poppins, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0; /* прибирати лише top */
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-address {
-  font-style: normal;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
+/* Visually hidden*/
+@import "./utils/utils";
 
 .section {
   padding: 48px 0; /* розбиваємо для bottom і top, а не padding-bottom: 96px */
@@ -105,31 +23,10 @@ address {
 }
 
 /* Button */
-.button {
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  color: var(--color-primary-light);
-  border: 2px solid var(--color-brand-normal);
-  background-color: var(--color-brand-normal);
-  cursor: pointer;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-.button:hover {
-  color: var(--color-brand-dark);
-  background-color: transparent;
-}
+@import "./components/buttons";
 
 /* Link */
-.link {
-  color: var(--color-primary-light);
-  transition: color 0.3s;
-}
-
-.link:hover {
-  color: var(--color-brand-normal);
-}
+@import "./components/links";
 
 /* Header */
 .header {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Local fonts */
 @font-face {
   font-display: swap;
@@ -6,7 +7,6 @@
   font-weight: 300;
   src: url("../fonts/poppins-v20-latin-300.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -14,7 +14,6 @@
   font-weight: 400;
   src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -22,7 +21,6 @@
   font-weight: 600;
   src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -30,7 +28,7 @@
   font-weight: 900;
   src: url("../fonts/poppins-v20-latin-900.woff2") format("woff2");
 }
-
+/* Roots*/
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
@@ -83,6 +81,7 @@ address {
   font-style: normal;
 }
 
+/* Visually hidden*/
 .visually-hidden {
   position: absolute;
   left: -10000px;
@@ -163,13 +162,7 @@ address {
 /* Hero section */
 .hero-section {
   padding: 272px 0; /* padding виставляємо тільки вертикальний */
-  background-image: linear-gradient(
-      102.76deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url("../images/hero-image.jpg");
+  background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url("../images/hero-image.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -278,7 +271,8 @@ address {
 
 .chefs-list {
   display: flex;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   row-gap: 40px;
   flex-wrap: wrap;
 }
@@ -294,8 +288,7 @@ address {
 
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-secondary-dark);
+  box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chef-title {
@@ -326,21 +319,14 @@ address {
 }
 
 .formats-item {
-  flex-basis: calc(
-    (100% - 40px) / 3
-  ); /*for items inside flex-container, 3 items in a row + (2 paddings * 2)*/
+  flex-basis: calc((100% - 40px) / 3); /*for items inside flex-container, 3 items in a row + (2 paddings * 2)*/
 }
 
 .format-card {
   border: 1px solid grey; /* видалити*/
   height: 444px;
   border-radius: 16px;
-  background-image: linear-gradient(
-    180deg,
-    rgba(49, 38, 26, 0) 55.21%,
-    rgba(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%
-  );
+  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
   padding: 24px;
   transition: transform 0.3s;
 }
@@ -557,17 +543,26 @@ address {
 /* .form-input:focus + .form-label {
   transform: translate(-36px, -40px);
 } */
-
 .form-input:focus {
   /* color: var(--color-primary-dark); */
   border-color: var(--color-brand-normal);
   outline: none;
 }
 
+.form-input::-moz-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
 .form-input::placeholder {
   color: var(--color-secondary-dark);
   font-size: 16px;
   line-height: 1.17;
+}
+
+.form-input:focus::-moz-placeholder {
+  color: var(--color-primary-dark);
 }
 
 .form-input:focus::placeholder {
@@ -597,4 +592,4 @@ address {
   width: 300px;
   height: 200px;
   background: linear-gradient(to bottom, #ffd700 50%, #0057b8 50%);
-} */
+} *//*# sourceMappingURL=main.css.map */
