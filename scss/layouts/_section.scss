@@ -1,0 +1,13 @@
+.section {
+  padding: 48px 0; /* розбиваємо для bottom і top, а не padding-bottom: 96px */
+
+  &__title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3;
+
+    &--centered {
+      text-align: center;
+    }
+  }
+}
