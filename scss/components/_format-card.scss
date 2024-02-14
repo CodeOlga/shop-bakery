@@ -12,11 +12,12 @@
     var(--color-primary-dark) 100%
   );
   padding: 24px;
-  transition: transform 0.3s;
+  overflow: hidden;
+  // transition: transform 0.3s;
 
-  &:hover {
-    transform: scale(1.05);
-  }
+  // &:hover {
+  //   transform: scale(1.05);
+  // }
 
   &__image {
     position: absolute;
