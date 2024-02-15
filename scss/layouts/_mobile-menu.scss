@@ -10,28 +10,17 @@
   transform: translateX(100%);
   transition: transform 0.3s;
 
-  // &::after {
-  //   position: absolute;
-  //   // bottom: 0;
-  //   // right: 0;
-  //   // bottom: 24px;
-  //   // right: 24px;
-  //   top: 50%;
-  //   left: 50%;
-  //   width: 180px;
-  //   // height: 240px;
-  //   height: 100vh;
-  //   background-image: url("../../images/decor-bread-modal.png");
-  //   background-repeat: no-repeat;
-  //   content: "";
-  // }
-
   &::after {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    position: absolute;
+    // bottom: 0;
+    // right: 0;
+    // bottom: 24px;
+    // right: 24px;
+    top: 50%;
+    left: 50%;
     width: 180px;
-    height: 240px;
+    // height: 240px;
+    height: 100vh;
     background-image: url("../../images/decor-bread-modal.png");
     background-repeat: no-repeat;
     content: "";
