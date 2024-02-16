@@ -6,7 +6,7 @@
       rgba(18, 18, 17, 0.6) 58.46%,
       rgba(18, 18, 17, 0) 90.36%
     ),
-    url("/images/hero-image.jpg");
+    url("../images/hero-image.jpg");
   background-repeat: no-repeat;
   background-position: top bottom;
   background-size: cover;
@@ -27,7 +27,7 @@
         rgba(18, 18, 17, 0.6) 58.46%,
         rgba(18, 18, 17, 0) 90.36%
       ),
-      url("/images/hero-image@2x.jpg");
+      url("../images/hero-image@2x.jpg");
   }
 
   &__title {
