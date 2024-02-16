@@ -8,13 +8,12 @@
     ),
     url("../images/hero-image.jpg");
   background-repeat: no-repeat;
-  // background-position: top bottom;
+  background-attachment: fixed; /* для гарного ефекту прокрутки*/
   background-position: center top;
   background-size: cover;
 
   @media screen and (min-width: $bp-desktop) {
     padding: 272px 0;
-    background-attachment: fixed; /* для гарного ефекту прокрутки*/
   }
 
   // ретинізація фонового зображення
